@@ -1,0 +1,111 @@
+/* CSS Portfolio Document ******************************************************************************************************************/
+/* Contains all the CSS for the Portfolio pages */
+
+/* ?Structure *************************/
+/* HEADER **************/
+.header-portfolio-page {
+  background-color: white;
+}
+
+/* MAIN ****************/
+/* Arrow Button */
+.portfolio-arrow-nav {
+  position: absolute;
+  bottom: 78%;
+  left: 3%;
+  margin: 0;
+}
+
+.left {
+  transform: rotate(135deg);
+  margin-left: 5px;
+}
+
+/* Portfolio Section */
+.portfolio-page {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 200px;
+}
+
+.portfolio-title,
+.portfolio-sub-title {
+  font-family: indivisible, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 5px 0;
+}
+
+.portfolio-title {
+  font-size: 2em;
+}
+
+.portfolio-sub-title {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.portfolio-text {
+  text-align: left;
+  font-size: 1.1em;
+  line-height: 30px;
+  padding-right: 230px;
+}
+
+.text-link {
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 0;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+.text-link:hover {
+  color: #6f775f;
+}
+
+.portfolio-sub-title2,
+.portfolio-sub-title3,
+.portfolio-sub-title4 {
+  font-size: 1.5em;
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+.portfolio-sub-title3,
+.portfolio-sub-title4 {
+  font-size: 2em;
+}
+
+.portfolio-sub-title4 {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+/* Image */
+.portfolio-page-image {
+  margin: 50px 0;
+  width: 85%;
+  height: auto;
+}
+
+/* Video */
+.portfolio-page-video {
+  height: 77vh;
+  margin-top: 50px;
+}
+
+.eep-video {
+  width: 75vw;
+  height: auto;
+}
+
+/* PDF Frame */
+iframe {
+  margin: 20px 0;
+  width: 85%;
+  height: 100vh;
+}

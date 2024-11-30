@@ -1,0 +1,319 @@
+/* CSS Base Document *********************************************************************************************************************/
+/* Contains all the basic CSS that applies accross several pages */
+
+/* ?Imports ***************************/
+/* Fonts */
+@import url("https://use.typekit.net/nsa1kth.css");
+
+/* ?Defaults **************************/
+html {
+  font-family: "indivisible", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+/* ?Structure *************************/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+hr,
+img {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* HEADER **************/
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo-image {
+  width: 10%;
+  height: auto;
+}
+
+.logo {
+  display: flex;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 2.5vh;
+  width: 10vw;
+  align-items: center;
+  margin: 0;
+  display: none;
+  z-index: 1100;
+}
+
+.hamburger-menu:hover {
+  box-shadow: none;
+}
+
+.hamburger-bar {
+  background-color: black;
+  border-radius: 5px;
+  height: 2.5px;
+  width: 100%;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Nav */
+nav {
+  /* margin: 0 650px 0 auto; */
+  margin-left: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  font-family: "indivisible", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.main-nav a:hover {
+  color: #6f775f;
+}
+
+.page-clicked {
+  color: #6f775f;
+  font-weight: 400;
+}
+
+/* MAIN ****************/
+/* Portfolio Nav */
+.portfolio-nav {
+  padding-top: 100px;
+  margin: 0;
+}
+
+.portfolio-nav ul li a {
+  font-size: 1.2em;
+}
+
+.nav-clicked {
+  color: #6f775f;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+/* Portfolio Section */
+h3,
+h4 {
+  font-weight: 300;
+}
+
+h3,
+.animation-h3 {
+  padding: 100px 0 50px 0;
+}
+
+h4 {
+  font-size: 0.6em;
+}
+
+.portfolio-wrapper {
+  width: calc(40% - 60px); /* Adjust width to fit two items per row */
+  box-sizing: border-box; /* Include border in width calculation */
+  margin: 0 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.wrapper div:hover img,
+.wrapper div:hover video {
+  transition: 0.5s ease-in-out;
+  opacity: 0.25;
+}
+
+img {
+  opacity: 1;
+  height: 50vh;
+  margin-top: 5px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title-overlay {
+  font-size: 1.5em;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper div:hover .title-overlay {
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+
+.portfolio-click {
+  display: block;
+  height: 50vh;
+}
+
+.amber-yard-link {
+  padding: 0;
+}
+
+/* Video */
+video {
+  height: 40vh;
+}
+
+/* Last Sections */
+.last-section {
+  padding-bottom: 50px;
+}
+
+/* Buttons Section */
+/* Work Together Button */
+button {
+  width: 15vw;
+  height: 6vh;
+  font-family: indivisible, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  background-color: #ab9e98;
+  color: #f2f2f2;
+  border: 1.3px solid #ab9e98;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ab9e9800;
+  color: #ab9e98;
+  box-shadow: 0px 2px 5px #ab9e98;
+}
+
+/* Link to Figma Button */
+.figma-button {
+  background-color: #ab9e9800;
+  color: #ab9e98;
+}
+
+.figma-button:hover {
+  border: 1.3px solid #ab9e9800;
+  background-color: #ab9e98;
+  color: #f2f2f2;
+}
+
+/* Arrow Button */
+.arrow-nav {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 70px;
+  position: fixed;
+  bottom: 3%;
+  left: 95%;
+  transition: transform 0.2s;
+}
+
+.arrow-nav:hover {
+  transform: scale(1.2);
+}
+
+.arrow-button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 7.5px;
+}
+
+.up,
+.left {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.up {
+  margin-top: 5px;
+}
+
+/* HORIZONTAL LINE *****/
+hr {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+/* FOOTER **************/
+footer {
+  font-size: small;
+  padding: 10px 0;
+}
+
+/* !CONSTRUCTION PAGE **/
+.construction-page {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.construction-page-h1 {
+  font-size: 3em;
+  color: #6f775f;
+  margin: 0;
+  padding: 0;
+}

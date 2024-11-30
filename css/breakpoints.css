@@ -1,0 +1,481 @@
+/* Breakpoints Document *********************************************************************************************************************/
+
+/* ?Desktops (up to 1200px) *************************************************************************************/
+@media only screen and (max-width: 1200px) {
+  /* !Base Css  *******************************/
+  /* Header */
+  header {
+    padding: 0;
+  }
+
+  /* Nav */
+  .nav {
+    padding: 10px 20px;
+  }
+
+  /* Portfolio Section */
+  h3 {
+    padding: 100px 0 50px 0;
+  }
+
+  .wrapper {
+    gap: 0 30px;
+  }
+
+  .portfolio-wrapper {
+    margin: 0 30px;
+  }
+
+  img {
+    height: 40vh;
+  }
+
+  /* Video */
+  video {
+    height: 33vh;
+  }
+
+  /* Arrow Button */
+  .arrow-nav {
+    left: 92%;
+  }
+
+  /* !Portfolio Css  **************************/
+  /* Portfolio Section */
+  .portfolio-text {
+    padding-right: 153px;
+  }
+
+  /* Arrow Button */
+  .portfolio-arrow-nav {
+    left: 3%;
+  }
+
+  .portfolio-page {
+    margin: 200px 0px 0 160px;
+  }
+
+  /* Video */
+  .portfolio-page-video {
+    width: 75vw;
+    height: auto;
+  }
+
+  /* !Style Css  ********************************/
+  /* About Section */
+  .about {
+    height: 170vh;
+  }
+
+  /* Introduction Section */
+  .introduction {
+    margin: 0 50px 0 0;
+  }
+
+  /* About Image */
+  .about-me-image {
+    height: 60vh;
+  }
+
+  /* Work Together Button */
+  .work-together-button-about-section {
+    width: 37vw;
+  }
+}
+
+/* ?Laptops (up to 1024px) ***************************************************************************************/
+@media only screen and (max-width: 1024px) {
+  /* !Base Css  *******************************/
+  /* Logo */
+  .logo-image {
+    width: 15%;
+  }
+
+  /* Portfolio Section */
+  .portfolio-wrapper {
+    width: calc(40% - 5px);
+  }
+
+  /* Button Section */
+  button {
+    width: 20vw;
+  }
+
+  /* !Portfolio Css  **************************/
+  /* Portfolio Section */
+  .portfolio-text {
+    padding-right: 129px;
+  }
+
+  /* !Style Css  ********************************/
+  /* About Section */
+  .about {
+    height: 190vh;
+  }
+
+  /* About Nav */
+  .about-nav a {
+    padding: 0 40px;
+  }
+}
+
+/* ?Tablets (up to 768px) ***************************************************************************************/
+@media only screen and (max-width: 768px) {
+  /* !Base Css  *******************************/
+  /* Logo */
+  .logo-image {
+    width: 30%;
+  }
+
+  /* Nav */
+  a {
+    padding: 0 15px;
+    font-size: 1.3em;
+  }
+
+  /* Portfolio Section */
+  .animation-h3 {
+    padding: 70px 0 50px 0;
+  }
+
+  img {
+    height: 30vh;
+  }
+
+  .wrapper {
+    gap: 0 10px;
+  }
+
+  .portfolio-wrapper {
+    height: 35vh;
+  }
+
+  .title-overlay {
+    font-size: 1.2em;
+  }
+
+  /* Video */
+  video {
+    height: 25vh;
+  }
+
+  /* Button Section */
+  button {
+    width: 30vw;
+  }
+
+  /* !Portfolio Css  **************************/
+  /* Portfolio Section */
+  .portfolio-sub-title {
+    font-size: 1.2em;
+  }
+
+  .portfolio-text {
+    padding-right: 100px;
+  }
+
+  .portfolio-page {
+    margin: 100px 0px 0 100px;
+  }
+
+  /* Katapult Squishy Circuits Videos */
+  .SC-promotional-video,
+  .SC-tutorial-video {
+    position: relative;
+    right: 50px;
+  }
+
+  /* !Style Css  ********************************/
+  /* About Section */
+  .about {
+    height: 210vh;
+  }
+
+  .about-nav a {
+    padding: 0 20px;
+    font-size: 1em;
+  }
+
+  /* Introduction Section */
+  .introduction {
+    margin: 0 30px 0 0;
+  }
+
+  /* About Image */
+  .about-me-image {
+    height: 45vh;
+  }
+
+  .about-text {
+    font-size: 1em;
+  }
+
+  /* Work Together Button */
+  .work-together-button-about-section {
+    width: 38vw;
+  }
+}
+
+/* ?Mobile Devices (up to 480px) ********************************************************************************/
+@media only screen and (max-width: 480px) {
+  /* !Base Css  *******************************/
+  /* Logo */
+  .logo-image {
+    width: 10%;
+  }
+
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .hamburger-menu.active .hamburger-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+    background-color: #6f775f;
+  }
+
+  .hamburger-menu.active .hamburger-bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+  }
+
+  .hamburger-menu.active .hamburger-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+    background-color: #6f775f;
+  }
+
+  /* Nav */
+  .main-nav {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 0.6s ease, opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition */
+    z-index: 1000; /* Ensure it's on top of other elements */
+  }
+
+  /* Nav Active */
+  #main-nav.active {
+    visibility: visible;
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Slide into view from the right */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition without delay */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    gap: 20px 0;
+  }
+
+  .main-nav ul li {
+    text-align: center;
+  }
+
+  .main-nav ul li a {
+    font-size: 1.5rem;
+  }
+
+  .separation {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 50vh;
+  }
+
+  /* Portfolio Nav */
+  .portfolio-nav {
+    padding-top: 50px;
+  }
+
+  .portfolio-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+  }
+
+  .portfolio-nav ul li a {
+    font-size: 1em;
+  }
+
+  /* Portfolio Section */
+  h3 {
+    padding: 30px 0;
+  }
+
+  .animation-h3 {
+    padding: 80px 0 40px 0;
+    font-size: 1em;
+  }
+
+  .ui-ux:nth-child(4),
+  .visual-design:nth-child(8),
+  .motion:nth-child(4) {
+    display: none; /* Hiding additional project placement */
+  }
+
+  /* Button Section */
+  button {
+    width: 73vw;
+  }
+
+  /* Arrow Button */
+  .arrow-nav {
+    left: 89%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow-nav:hover {
+    transform: none;
+  }
+
+  /* !Portfolio Css  **************************/
+  /* Portfolio Section */
+  .portfolio-page {
+    margin: 100px 0px 0 60px;
+  }
+
+  .portfolio-title {
+    font-size: 1.5em;
+  }
+
+  .portfolio-sub-title {
+    font-size: 1em;
+    text-align: left;
+  }
+
+  .portfolio-text {
+    padding-right: 60px;
+  }
+
+  .portfolio-page-image {
+    margin: 20px 0;
+  }
+
+  .SC-promotional-video,
+  .SC-tutorial-video {
+    right: 30px;
+  }
+
+  /* Arrow Button */
+  .portfolio-arrow-nav {
+    left: 3%;
+  }
+
+  /* !Style Css  ********************************/
+  /* About Section */
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 300vh;
+  }
+
+  .about-nav {
+    width: 100vw;
+    border-radius: 0px;
+  }
+
+  .about-nav a {
+    padding: 0 20px;
+    font-size: 1em;
+  }
+
+  /* Introduction Section */
+  .introduction {
+    margin: 0;
+  }
+
+  .about-me,
+  .work-together-button-about-section {
+    width: 63vw;
+  }
+
+  .about-me-image {
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    font-size: 1em;
+  }
+}
+
+/* ?Smaller Devices (up to 319px) ************************************************************************************/
+@media only screen and (max-width: 319px) {
+  /* !Base Css  *******************************/
+  /* Hambuerger Menu */
+  .hamburger-menu {
+    width: 20vw;
+  }
+
+  a {
+    padding: 0;
+  }
+
+  img {
+    height: 27.2vh;
+  }
+
+  .arrow-nav {
+    visibility: hidden;
+    bottom: 87%;
+  }
+
+  /* !Portfolio Css  **************************/
+  /* Portfolio Section */
+  .portfolio-arrow-nav {
+    visibility: visible;
+  }
+
+  .portfolio-page {
+    margin: 50px 0px 0 40px;
+  }
+
+  .portfolio-title {
+    font-size: 1.2em;
+  }
+
+  .portfolio-text {
+    padding-right: 40px;
+  }
+
+  .portfolio-sub-title2 {
+    text-align: left;
+    font-size: 1.2em;
+  }
+
+  /* Squishy Circuits Videos */
+  .SC-promotional-video,
+  .SC-tutorial-video {
+    right: 20px;
+  }
+
+  /* !Style Css  ********************************/
+  /* About Section */
+  .about {
+    height: 380vh;
+  }
+
+  .work-together-button-about-section {
+    width: 92vw;
+  }
+
+  .about-nav a {
+    padding: 0 15px;
+    font-size: 0.87em;
+  }
+}
